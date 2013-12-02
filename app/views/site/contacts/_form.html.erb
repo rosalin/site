@@ -1,0 +1,16 @@
+<div class="contact_form">
+    <%= simple_form_for @site_contact do |f| %>
+          <div class="box-dados">
+            <%= f.input :name, :label=>"Nome" %>
+            <%= f.input :email,:label=> "E-mail"  %>
+            <%= f.input :telefone %>
+          </div>
+
+          <div class="box-message">
+            <%= f.input :message, :label=>"Menssagem", :as => :text, :required=> false %>
+          </div>
+          <div class="submit">
+           <%= f.submit "Enviar" %>
+          </div>
+    <% end %>
+</div>

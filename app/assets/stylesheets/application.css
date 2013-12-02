@@ -1,0 +1,79 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+input#site_contact_name{
+	width: 330px;
+	height: 30px;
+	background: #fafafa;
+	border: solid 1px #e6e6e6;
+}	
+
+input#site_contact_email{
+	width: 330px;
+	height: 30px;
+	background: #fafafa;
+	border: solid 1px #e6e6e6;
+}
+
+input#site_contact_telefone{
+	width: 330px;
+	height: 30px;
+	background: #fafafa;
+	border: solid 1px #e6e6e6;
+}
+
+input[type="submit"]{
+	float: right;
+	background: #fafafa;
+	height: 30px;
+	margin-right: 50px;
+	margin-top: 10px;
+	border: solid 1px #e6e6e6;
+}
+
+
+textarea#site_contact_message{
+	height: 160px;
+	width: 450px;
+	background: #fafafa;
+	border: solid 1px #e6e6e6;
+}
+
+form#new_contact{
+	text-align: left;
+
+}
+
+
+form#new_contact label{
+	display: block;
+	text-align: left;
+}
+
+
+div.box-dados{
+	float:left;
+	margin-right: 30px;
+}
+
+div.contact_form{
+	height: 240px;
+	border: solid 1px #e6e6e6;
+	padding: 20px;
+}
+
+form#new_site_contact label{
+	display: block;
+	text-align: left;
+}

@@ -1,0 +1,26 @@
+<div class="newsletter_box">
+  <div class="notice">
+          <%= flash[:newsletter] %>
+  </div>
+  
+  <div class="newsletter">
+      <h3 class="cadastrase">Receba nossas notícias</h3>
+      <p class="descript">Saiba quando novos produtos ou serviços forem lançados através do nosso canal de notícias</p>
+
+      <%= simple_form_for @site_newsletter,
+        :remote => true,
+        :method => :post do |f| %>
+
+          <div class="email">
+            <%= f.input :email, :placeholder => 'E-mail', :label_html => {class: 'invisible'}  %>
+          </div>
+          <div class="nome">
+            <%= f.input :nome, :placeholder => 'Nome', :label_html => {class: 'invisible'} %>
+         </div>
+      
+         <div class="submit-newsletter">
+            <%= f.submit "Cadastrar" %>
+         </div>
+       <%  end %>
+  </div>
+</div>
