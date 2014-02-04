@@ -10,6 +10,19 @@ gem 'site', :git =>'git@github.com:rosalin/site.git'
 
 rode <pre>"bundle install"</pre>
 
+execute o seguintes comandos no terminal:
+
+$rails g site:install
+
+$rake db:migrate
+
+
+Adcione mais as seguinte linhas do seu gemfile:
+gem 'simple_form'
+gem "execjs"
+gem "therubyracer"
+
+
 Para reaproveitar a tela de contatos:
 
 1.Crie o diretorio /views/site/contacts/new.html.erb
