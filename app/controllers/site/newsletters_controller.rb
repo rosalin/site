@@ -1,6 +1,9 @@
 class Site::NewslettersController < ApplicationController
   # GET /site/newsletters
   # GET /site/newsletters.json
+  
+  respond_to :js, :html
+  
   def index
     @site_newsletters = Site::Newsletter.all
 
@@ -43,13 +46,13 @@ class Site::NewslettersController < ApplicationController
      begin
       @site_newsletter = Newsletter.new(params[:site_newsletter])
       if @site_newsletter.save
-        flash[:newsletter] = 'Obrigado, Recebemos seu cadastro!'
+        flash[:site_newsletter] = 'Obrigado, Recebemos seu cadastro!'
         #redirect_to(root_path)
       else
         render :new
       end
     rescue ScriptError
-      flash[:error] = 'Desculpe-nos, aconteceu um erro inesperado!'
+      flash[:site_newsletter] = 'Desculpe-nos, aconteceu um erro inesperado!'
     end
   end
 
