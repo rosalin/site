@@ -131,13 +131,12 @@ end
 
 1.4 Crie um arquivo chamado "create.js.erb" nesse doretorio e coloque o seguinte conteudo
 
-<code>
 //caso queira personalizar a mensage de sucesso ao salvar um nesletter, coloque sua mensagem no lugar do parametro <%= escape_javascript(flash[:site_newsletter]) %>
 $(".notice").text("<%= escape_javascript(flash[:site_newsletter]) %>"); 
 $(".notice").show();
 $("#site_newsletter_email").val("");
 $("#site_newsletter_nome").val("");
-</code>
+
 
 Tudo deve funcionar agora.
 Rodrigo Rosalin
