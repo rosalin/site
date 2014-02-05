@@ -6,22 +6,27 @@ OBS: Solicite ao Rodrigo que adcione seu usuario no github como colaborador
 
 Como usar:
 - Adcione no gemfile
+<pre><code>
 gem 'site', :git =>'git@github.com:rosalin/site.git'
+</code></pre>
 
-rode <pre>"bundle install"</pre>
+<pre><code>
+rode "bundle install"
+</code></pre>
 
-execute o seguintes comandos no terminal:
+execute o seguintes comandos no terminal PARA INSTALAR AS MIGRATIONS NO PROJETO:
 
+<pre><code>
 $rails g site:install
-
 $rake db:migrate
-
+</code></pre>
 
 Adcione mais as seguinte linhas do seu gemfile:
+<pre><code>
 gem 'simple_form'
 gem "execjs"
 gem "therubyracer"
-
+</code></pre>
 
 Para reaproveitar a tela de contatos:
 
@@ -29,19 +34,19 @@ Para reaproveitar a tela de contatos:
 
 1.2 Coloque a seguinte linha no arquivo:
 
-<pre>
+<pre><code>
 ...
 
 <%= render :partial => "/site/contacts/form" %>
 
 ...
-</pre>
+</code></pre>
 
 1.3 Para adptar os elementos, basta inspecionar o elementos e alterar os respectivos css
 
 1.4 Adcione o seguinte codigo no arquivo enviroments/production.rb e no development/production.rb
 
-<pre>
+<pre><code>
 ...
   
   ActionMailer::Base.delivery_method = :smtp
@@ -59,21 +64,21 @@ Para reaproveitar a tela de contatos:
    config.action_mailer.raise_delivery_errors = true
    
 ...
-</pre>
+</code></pre>
 
 1.5 adcione a seguinte linha no arquivo config/application.rb que representa o e-mail que recebera a mensagem do contato realizado (esse e-mail deve ser o e-mail do cliente)
 
-<pre>
+<pre><code>
 ...
 
 Site::MAIL_TO = "cliente@cliente.com.br"
 
 ...
-</pre>
+</code></pre>
 
 ficando da seguinte forma:
 
-<pre>
+<pre><code>
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -94,22 +99,22 @@ module Amaral
     Site::MAIL_TO = "rodrigo@neemo.com.br"
   end
 end
+</code></pre>
 
 
-</pre>
 
 Para reaproveitar a tela de newsletters:
 1.Coloque o codigo abaixo no layout "application.html.erb" ou onde desejar
 
-<pre>
+<pre><code>
 <div class="notice"></div>
 <%= render :partial => "/site/newsletters/form" %>
-</pre>
+</code></pre>
 
 - Caso tenha colocado por exemplo no application.html.erb faça:
 Abra o controller application_controller.rb e adcione as seguintes linhas:
 
-<pre>
+<pre><code>
 ...
 
 before_filter :load
@@ -119,7 +124,7 @@ def load
 end
 
 ...
-</pre>
+</code></pre>
 
 1.2 Para adptar os elementos, basta inspecionar o elementos e alterar os respectivos css
 
@@ -127,13 +132,13 @@ end
 
 1.4 Crie um arquivo chamado "create.js.erb" nesse doretorio e coloque o seguinte conteudo
 
-<pre>
+<pre><code>
 //caso queira personalizar a mensage de sucesso ao salvar um nesletter, coloque sua mensagem no lugar do parametro <%= escape_javascript(flash[:site_newsletter]) %>
 $(".notice").text("<%= escape_javascript(flash[:site_newsletter]) %>"); 
 $(".notice").show();
 $("#site_newsletter_email").val("");
 $("#site_newsletter_nome").val("");
-</pre>
+</code></pre>
 
 Tudo deve funcionar agora.
 Rodrigo Rosalin

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   namespace :site do
     resources :newsletters
   end
