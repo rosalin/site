@@ -47,7 +47,7 @@ Para reaproveitar a tela de contatos:
 1.4 Adcione o seguinte codigo no arquivo enviroments/production.rb e no development/production.rb
 
 <code>
-...
+
   
   ActionMailer::Base.delivery_method = :smtp
 
@@ -63,7 +63,6 @@ Para reaproveitar a tela de contatos:
 
    config.action_mailer.raise_delivery_errors = true
    
-...
 </code>
 
 1.5 adcione a seguinte linha no arquivo config/application.rb que representa o e-mail que recebera a mensagem do contato realizado (esse e-mail deve ser o e-mail do cliente)
